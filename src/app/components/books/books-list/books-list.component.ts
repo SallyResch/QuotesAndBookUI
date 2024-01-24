@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book.model';
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-books-list',
@@ -8,40 +9,20 @@ import { Book } from 'src/app/models/book.model';
 })
 
 export class BooksListComponent implements OnInit{
-  books: Book[]=[
-    {
-      id:'1',
-      title: 'Emil i Lönneberga',
-      author: "Astrid Lindgren",
-      genre: "barnböcker",
-      published: 1994
-    },
-    {
-      id:'2',
-      title: 'Baltasar i Lönneberga',
-      author: "Bastrid Lindgren",
-      genre: "barnböcker",
-      published: 1994
-    },
-    {
-      id:'3',
-      title: 'Nisse i Lönneberga',
-      author: "Kastrid Lindgren",
-      genre: "barnböcker",
-      published: 1994
-    },
-    {
-      id:'4',
-      title: 'Kajsa i Lönneberga',
-      author: "Tastrid Lindgren",
-      genre: "barnböcker",
-      published: 1994
-    },
-  ];
+  books: Book[]=[];
 
-  constructor(){}
+  constructor(private booksService: BooksService){}
+
   ngOnInit(): void {
-      // this.books.push()
+  this.booksService.getAllBooks()
+  .subscribe({
+    next: (books) => {
+      this.books=books;
+    },
+    error: (response) => {
+      console.log(response);
+    }
+  })    
   }
 
 }
