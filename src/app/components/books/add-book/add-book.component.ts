@@ -1,10 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Book } from 'src/app/models/book.model';
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
   styleUrls: ['./add-book.component.css']
 })
-export class AddBookComponent {
+export class AddBookComponent implements OnInit {
+
+  addBookRequest: Book = {
+    id: '',
+    title: '',
+    author: '',
+    genre: '',
+    published: 0,
+  };
+  constructor(private bookService: BooksService, private router: Router){}
+
+  ngOnInit(): void {
+    
+  }
+  addBook() {
+  this.bookService.addBook(this.addBookRequest)
+  .subscribe({
+    next: (book) => {
+      this.router.navigate(['books'])
+    }
+  });
+  }
 
 }

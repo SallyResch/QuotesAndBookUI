@@ -15,6 +15,11 @@ export class BooksService {
 
 //Connection to fetching data from database
   getAllBooks(): Observable<Book[]>{
-    return this.http.get<Book[]>(this.baseApiUrl + '/api/books')
+    return this.http.get<Book[]>(this.baseApiUrl + '/api/books');
+  }
+
+  addBook(addBookRequest:Book): Observable<Book> {
+    addBookRequest.id= '00000000-0000-0000-0000-000000000000'
+    return this.http.post<Book>(this.baseApiUrl + '/api/books', addBookRequest);
   }
 }
