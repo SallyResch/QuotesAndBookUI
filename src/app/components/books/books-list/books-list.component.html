@@ -8,6 +8,8 @@
 				<th>Author</th>
 				<th>Genre</th>
 				<th>Published</th>
+				<th> </th>
+				<th> </th>
 			</tr>
 		</thead>
 		<tbody>
@@ -17,6 +19,8 @@
 				<td>{{book.author}}</td>
 				<td>{{book.genre}}</td>
 				<td>{{book.published}}</td>
+				<td><a [routerLink]="['/books','edit', book.id ]">View</a></td>
+				<td><a [routerLink]="['/books','delete', book.id ]">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>
