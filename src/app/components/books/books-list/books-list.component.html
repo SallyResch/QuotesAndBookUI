@@ -19,11 +19,11 @@
 				<td>{{book.author}}</td>
 				<td>{{book.genre}}</td>
 				<td>{{book.published}}</td>
-				<td><a [routerLink]="['/books','edit', book.id ]">View</a></td>
+				<td><a [routerLink]="['/books','edit', book.id ]">Edit</a></td>
 				<td><a [routerLink]="['/books','delete', book.id ]">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>
 	<p *ngIf="!books || books.length <= 0">No books found</p>
-	<button routerLink="books/add">Add New Book</button>
+	<button [routerLink]="['/books', 'add']">Add New Book</button>
 </div>

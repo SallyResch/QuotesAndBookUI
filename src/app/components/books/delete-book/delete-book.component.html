@@ -1,1 +1,31 @@
-<p>delete-book works!</p>
+<div class="container">
+    <h1>Sure you want to delete?</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" 
+                name="title" [(ngModel)]="bookDetails.title">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author"
+                name="author" [(ngModel)]="bookDetails.author">
+            </div>
+            <div class="mb-3">
+                <label for="genre" class="form-label">Genre</label>
+                <input type="text" class="form-control" id="genre"
+                name="genre" [(ngModel)]="bookDetails.genre">
+            </div>
+            <div class="mb-3">
+                <label for="published" class="form-label">Published</label>
+                <input type="number" class="form-control" id="published"
+                name="published" [(ngModel)]="bookDetails.published">
+            </div>
+            <button type="submit" class="btn btn-danger" 
+            (click)="deleteBook(bookDetails.id)">Delete</button>
+        </form>
+        </div>
+    </div>
+</div>
