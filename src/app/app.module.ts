@@ -9,6 +9,8 @@ import { AddBookComponent } from './components/books/add-book/add-book.component
 import { FormsModule } from '@angular/forms';
 import { EditBookComponent } from './components/books/edit-book/edit-book.component';
 import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
+import { LoginComponent } from './components/users/login/login.component';
+import { SignUpComponent } from './components/users/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DeleteBookComponent } from './components/books/delete-book/delete-book.
     BooksListComponent,
     AddBookComponent,
     EditBookComponent,
-    DeleteBookComponent
+    DeleteBookComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
