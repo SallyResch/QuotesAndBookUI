@@ -4,6 +4,8 @@ import { BooksListComponent } from './components/books/books-list/books-list.com
 import { AddBookComponent } from './components/books/add-book/add-book.component';
 import { EditBookComponent } from './components/books/edit-book/edit-book.component';
 import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
+import { SignUpComponent } from './components/users/sign-up/sign-up.component';
+import { LoginComponent } from './components/users/login/login.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,14 @@ const routes: Routes = [
   {
     path:'books/delete/:id',
     component: DeleteBookComponent
+  },
+  {
+    path:'users/sign-up',
+    component: SignUpComponent
+  },
+  {
+    path:'users/login',
+    component: LoginComponent
   }
 ];
 
