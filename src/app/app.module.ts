@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BooksListComponent } from './components/books/books-list/books-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddBookComponent } from './components/books/add-book/add-book.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditBookComponent } from './components/books/edit-book/edit-book.component';
 import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
 import { LoginComponent } from './components/users/login/login.component';
@@ -26,7 +26,8 @@ import { SignUpComponent } from './components/users/sign-up/sign-up.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
