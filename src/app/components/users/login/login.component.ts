@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit{
   
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private auth: AuthService){
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router){
 
   }
 
@@ -25,12 +26,12 @@ export class LoginComponent implements OnInit{
 
   onLogin(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value)
       //send object to database
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(response)=>{
-          alert(response.message)
+          console.log(response.message)
+          this.router.navigate(['quotes/add'])
         },
         error:(err)=>{
           alert(err?.error.message)
