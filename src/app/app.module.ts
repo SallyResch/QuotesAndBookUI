@@ -11,6 +11,7 @@ import { EditBookComponent } from './components/books/edit-book/edit-book.compon
 import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { SignUpComponent } from './components/users/sign-up/sign-up.component';
+import { AddQuoteComponent } from './components/quotes/add-quote/add-quote.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SignUpComponent } from './components/users/sign-up/sign-up.component';
     EditBookComponent,
     DeleteBookComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    AddQuoteComponent
   ],
   imports: [
     BrowserModule,

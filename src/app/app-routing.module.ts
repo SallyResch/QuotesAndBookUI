@@ -6,6 +6,7 @@ import { EditBookComponent } from './components/books/edit-book/edit-book.compon
 import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
 import { SignUpComponent } from './components/users/sign-up/sign-up.component';
 import { LoginComponent } from './components/users/login/login.component';
+import { AddQuoteComponent } from './components/quotes/add-quote/add-quote.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path:'books/delete/:id',
     component: DeleteBookComponent
+  },
+  {
+    path:'quotes/add',
+    component: AddQuoteComponent
   },
   {
     path:'users/sign-up',
