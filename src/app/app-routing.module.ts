@@ -11,7 +11,7 @@ import { AddQuoteComponent } from './components/quotes/add-quote/add-quote.compo
 const routes: Routes = [
   {
     path:'',
-    component: BooksListComponent
+    component: LoginComponent
   },
   {
     path:'books',

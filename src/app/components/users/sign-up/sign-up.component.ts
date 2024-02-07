@@ -20,8 +20,6 @@ export class SignUpComponent implements OnInit{
     this.signUpForm = this.fb.group({
       email:['', Validators.required],
       password:['', Validators.required],
-      token: ['This is your token'],
-      role: ['User']
     })
   }
 

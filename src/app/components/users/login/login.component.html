@@ -1,4 +1,4 @@
-<div class="container border border-success border-5 rounded-4 pb-5 mt-3" >
+<div class="container border border-success border-5 rounded-4 pb-5" style="max-width: 700px; margin-top: 150px;">
     <div class="row">
         <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
             <div class="panel-heading">
@@ -20,9 +20,10 @@
                     <input formControlName="password" type="password" class="form-control" 
                     id="exampleInputPassword1" placeholder=" Enter Password">
                 </div>
+                <p>Dont have an account? <a routerLink="/users/sign-up">Signup</a>  </p>
                 <button (click)="onLogin" type="submit" class="btn btn-success">Login</button>
             </form>
-            <p>Dont have an account? <a routerLink="/users/sign-up">Signup</a>  </p>
+            
         </div>
         </div>
     </div>
